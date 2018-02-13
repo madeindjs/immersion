@@ -25,8 +25,12 @@
             <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
           </ul>
           <ul class="navbar-nav mt-2 mt-md-0">
-            <li class="nav-item"><%= link_to "S'inscrire", signup_path, class: 'nav-link' %></li>
-            <li class="nav-item"><%= link_to 'Se connecter', signin_path, class: 'nav-link' %></li>
+            <% if current_user %>
+              <li class="nav-item"><%= link_to current_user.complete_name, current_user, class: 'nav-link' %></li>
+            <% else %>
+              <li class="nav-item"><%= link_to "S'inscrire", signup_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Se connecter', signin_path, class: 'nav-link' %></li>
+            <% end %>
           </ul>
         </div>
       </nav>
@@ -35,9 +39,13 @@
       <%= render 'shared/flash' %>
       <%= yield %>
     </main>
-    <footer class="footer">
+    <footer class="footer text-muted">
       <div class="container">
-        <%#= render 'layouts/footer', cached: true %>
+        <ul class="list-inline">
+          <li class="list-inline-item"><%= link_to "Mentions légales", legal_path %></li>
+          <li class="list-inline-item"><%= link_to "A propos", about_path %></li>
+          <li class="list-inline-item"><%= link_to "Nous contacter", contact_path %></li>
+        </ul>
       </div>
     </footer>
     <!-- Bootstrap dependencies -->

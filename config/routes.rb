@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :products
+  get 'pages/legal'
+
+  get 'pages/about'
+
   resources :users
 
   get "home" => "pages#home"
+  get "legal" => "pages#legal"
+  get "contact" => "pages#contact"
+  get "about" => "pages#about"
 
   resources :users
   resources :user_sessions, only: [:create, :destroy]
