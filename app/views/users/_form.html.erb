@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(user) do |f| %>
+  <%= f.email_field :email %>
+  <%= f.text_field :firstname, label: 'Prénom' %>
+  <%= f.text_field :lastname, label: 'Nom' %>
+  <%= f.password_field :password, label: 'Mot de passe' %>
+  <%= f.password_field :password_confirmation, label: 'Confirmation du mot de passe'%>
+  <%= f.submit "Créer son compte" %>
+<% end %>

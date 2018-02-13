@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
+
+  get "home" => "pages#home"
+
+  resources :users
+  resources :user_sessions, only: [:create, :destroy]
+  get 'signout', to: 'user_sessions#destroy'
+  get 'signin', to: 'user_sessions#new'
+  get "signup" => "users#new"
+  get "confirm_email/:token" => "users#confirm_email", as: 'confirm_email'
+
+  root 'pages#home'
 end

@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Immersion</title>
+    <%#= render 'layouts/meta', cache: true %>
     <%= csrf_meta_tags %>
-
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-
   <body>
-    <%= yield %>
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md fixed-top">
+        <%= link_to 'Immersion', home_path, class: 'navbar-brand' %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
+          </ul>
+          <ul class="navbar-nav mt-2 mt-md-0">
+            <li class="nav-item"><%= link_to "S'inscrire", signup_path, class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Se connecter', signin_path, class: 'nav-link' %></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <%#= render 'layouts/footer', cached: true %>
+      </div>
+    </footer>
+    <!-- Bootstrap dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

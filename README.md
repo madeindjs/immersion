@@ -1,5 +1,19 @@
 # README
 
+## Developpment environnement
+
+Use Maildev
+
+~~~bash
+$ npm install -g maildev
+~~~
+
+## Dependencies
+
+~~~bash
+$ sudo apt install nodejs libmagickwand-dev
+~~~
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

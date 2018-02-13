@@ -39,4 +39,17 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.asset_host = 'http://localhost:3000'
+  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.default_url_options = { host: 'http://localhost', port: 3000, only_path: false }
+  config.action_mailer.perform_caching = false
+
+  # don't forget to install maildev:  npm install -g maildev
+  config.action_mailer.smtp_settings = {
+    address:              'localhost',
+    port:                 1025,
+    domain:               'localhost',
+  }
 end
