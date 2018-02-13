@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   acts_as_authentic
 
+  has_many :products
+
   include Authlogic::ActsAsAuthentic::EmailToken::Confirmation
 
   validates_uniqueness_of :email

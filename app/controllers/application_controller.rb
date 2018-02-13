@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def check_login
-    render_alert unless current_user
+    redirect_to signin_path unless current_user
   end
 
   def check_admin
