@@ -17,7 +17,8 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    return 'default_background.jpg'
+    sizes = [300,400,500,600,700]
+    return 'http://lorempicsum.com/futurama/%s/%s/%s' % [sizes[rand(5)], sizes[rand(5)], rand(1...10)]
   end
 
   # Process files as they are uploaded:

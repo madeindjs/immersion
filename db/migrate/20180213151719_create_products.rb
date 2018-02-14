@@ -10,6 +10,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :slug
       t.index :slug, unique: true
 
+      t.string :picture
+
       t.timestamps
     end
   end

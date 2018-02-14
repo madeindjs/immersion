@@ -5,6 +5,8 @@
     <li class="breadcrumb-item active" aria-current="page"><%= @product.name %></li>
   </ol>
 </nav>
+<pre></pre>
+<div class="cover" style="background-image: url(<%=  @product.picture.url %>)"></div>
 <h1><%= @product.name %> <small>proposé par <%= link_to @product.user.complete_name, @product.user %>  dans <%= link_to @product.category.name, @product.category %></small></h1>
 <p><%= @product.description %></p>
 <%= link_to 'Editer', edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>

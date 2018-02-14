@@ -2,7 +2,7 @@
   <% categories.each do |category| %>
     <div class="col-md-4">
       <div class="card mb-4 box-shadow">
-        <img class="card-img-top" src="http://lorempicsum.com/futurama/300/300/<%= category.id %>" alt="Card image cap">
+        <img class="card-img-top" src="<%= category.picture.url %>" alt="Card image cap">
         <div class="card-body">
           <p class="card-title"><strong><%= category.name %></strong></p>
           <p class="card-text"></p>

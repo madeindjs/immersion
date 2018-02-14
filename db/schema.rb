@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20180214083439) do
     t.string "name"
     t.string "description"
     t.string "slug"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_categories_on_slug", unique: true
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180214083439) do
     t.float "price"
     t.integer "user_id"
     t.string "slug"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
