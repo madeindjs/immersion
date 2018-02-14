@@ -28,6 +28,7 @@ fr:
 
   products: produits
   product:
+    product: produit
     edit: Mettre à jour le produit
     new: Créer un produit
     created_by: proposé par

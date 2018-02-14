@@ -5,7 +5,9 @@
         <img class="card-img-top" src="<%= category.picture.url %>" alt="Card image cap">
         <div class="card-body">
           <p class="card-title"><strong><%= category.name %></strong></p>
-          <p class="card-text"></p>
+          <p class="card-text">
+            <%= pluralize category.products.size, t('product.product'), t('products') %>
+          </p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <%= link_to t('button.view'), category, class: 'btn btn-secondary' %>
