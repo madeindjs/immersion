@@ -23,7 +23,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should redirect create product" do
     assert_no_difference('Product.count') do
-      post products_url, params: { product: { name: @product.name, user: @product.user } }
+      post products_url, params: { product: { name: @product.name, category_id: 1 } }
     end
 
     assert_redirected_to signin_path
@@ -46,14 +46,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should redirect on update product" do
-    patch product_url(@product), params: { product: { name: @product.name} }
+    patch product_url(@product), params: { product: { name: @product.name, category_id: 1} }
     assert_redirected_to signin_path
   end
 
   test "should update product" do
     login(users(:me))
-    patch product_url(@product), params: { product: { name: @product.name} }
-    assert_redirected_to product_url(@product)
+    patch product_url(@product), params: { product: { name: "mazafak", category_id: 1} }
+    @product.reload
+    assert_equal "mazafak", @product.name
   end
 
   test "should redirect destroy product" do

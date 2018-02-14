@@ -21,6 +21,10 @@ class User < ApplicationRecord
     "#{self.lastname} #{self.firstname}"
   end
 
+  def picture
+    "http://lorempicsum.com/futurama/100/100/#{self.id}"
+  end
+
 
   # def paypal_url(return_path)
   #   values = {
@@ -37,7 +41,7 @@ class User < ApplicationRecord
   #   "#{Rails.application.secrets.paypal_host}/cgi-bin/webscr?" + values.to_query
   # end
 
-  def super_user?
+  def is_admin?
     false
   end
 

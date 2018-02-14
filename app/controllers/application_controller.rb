@@ -15,23 +15,12 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.user
   end
 
-  def found_restaurant
-    begin
-      if request.subdomain
-        @restaurant = Restaurant.friendly.find request.subdomain
-      elsif params[:restaurant_id]
-        @restaurant = Restaurant.friendly.find params[:restaurant_id]
-      end
-    rescue ActiveRecord::RecordNotFound
-    end
-  end
-
   def check_login
     redirect_to signin_path unless current_user
   end
 
   def check_admin
-    render_alert unless current_user and current_user.restaurants.include? @restaurant
+    render_alert unless current_user && current_user.is_admin?
   end
 
   def check_super_user
@@ -41,6 +30,7 @@ class ApplicationController < ActionController::Base
   def render_alert
     render plain: '<div class="alert alert-danger">Vous n\'avez pas le droit d\'accéder à cette page</div>', status: 403
   end
+
 
   helper_method
 end

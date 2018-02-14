@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-    @products = Product.all
+    @products = Product.includes(:user).all
   end
 
 end

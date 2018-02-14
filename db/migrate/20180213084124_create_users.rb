@@ -21,6 +21,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
 
       # friendly_id
       t.string :slug
+      t.index :slug, unique: true
 
 
       # from https://github.com/jarrett/authlogic_email_token/blob/master/readme.md
@@ -39,7 +40,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
     end
 
 
-    add_index :users, :slug, unique: true
     add_index :users, :perishable_token
     add_index :users, :email, unique: true
   end

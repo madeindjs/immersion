@@ -1,6 +1,7 @@
 <%= bootstrap_form_for(product) do |form| %>
   <%= form.text_field :name, label: 'Nom' %>
   <%= form.number_field :price, label: 'Prix', append: '€' %>
+  <%= form.collection_select :category_id, Category.all, :id, :name %>
   <%= form.text_area :description, label: 'Description' %>
   <%= form.submit 'Sauvegarder' %>
 <% end %>

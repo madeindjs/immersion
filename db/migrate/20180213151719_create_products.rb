@@ -6,6 +6,10 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.float :price
       t.integer :user_id
 
+      # friendly_id
+      t.string :slug
+      t.index :slug, unique: true
+
       t.timestamps
     end
   end

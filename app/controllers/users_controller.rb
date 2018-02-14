@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
     if @user.save
       # if super user create something, do not send confirmation, activate tis account & login as this user
-      if current_user and current_user.super_user?
+      if current_user and current_user.is_admin?
         @user.confirm_email!
         UserSession.create(@user)
         flash[:success] = "Votre compte a été créé avec succès."
