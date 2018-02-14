@@ -1,8 +1,8 @@
 <%= bootstrap_form_for(user) do |f| %>
   <%= f.email_field :email %>
-  <%= f.text_field :firstname, label: 'Prénom' %>
-  <%= f.text_field :lastname, label: 'Nom' %>
-  <%= f.password_field :password, label: 'Mot de passe' %>
-  <%= f.password_field :password_confirmation, label: 'Confirmation du mot de passe'%>
-  <%= f.submit "Créer son compte" %>
+  <%= f.text_field :firstname, label: t('form.firstname') %>
+  <%= f.text_field :lastname, label: t('form.lastname') %>
+  <%= f.password_field :password, label: t('form.password') %>
+  <%= f.password_field :password_confirmation, label: t('form.password_confirmation') %>
+  <%= f.submit t('signup') %>
 <% end %>

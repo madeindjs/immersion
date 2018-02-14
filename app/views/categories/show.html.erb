@@ -1,9 +1,9 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item" aria-current="page"><%= link_to 'Prestations', categories_path %></li>
+    <li class="breadcrumb-item" aria-current="page"><%= link_to t('categories'), categories_path %></li>
     <li class="breadcrumb-item active" aria-current="page"><%= @category.name %></li>
   </ol>
 </nav>
-<div class="cover" style="background-image: url(<%=  @category.picture.url %>)"></div>
+<div class="cover" style="background-image: url(<%= @category.picture.url %>)"></div>
 <h1><%= @category.name %></h1>
 <%= render 'products/list', products: @category.products %>

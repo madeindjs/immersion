@@ -1,17 +1,11 @@
-<h1>Utilisateurs</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to user.complete_name, user %></td>
-        <td><%= user.email %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active " aria-current="page"><%= t 'users' %></li>
+  </ol>
+</nav>
+<h1><%= t 'users' %></h1>
+<div class="row">
+  <% @users.each do |user| %>
+    <%= render 'users/sticker', user: user %>
+  <% end %>
+</div>

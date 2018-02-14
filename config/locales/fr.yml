@@ -1,0 +1,52 @@
+fr:
+  project_name: 'Immersion'
+
+  users: 'Guides'
+
+  signup: S'inscrire
+  signin: Se connecter
+
+  legal: Mentions légales
+  about: A propos
+  contact: Nous contacter
+
+  categories: 'Prestations'
+
+  as: dans
+  go_back: Revenir en arrière
+
+  lorem: >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  user_session:
+    destroy: se déconnecter
+    not_already_signup: Pas encore de compte?
+    signup: Créer un compte
+
+  button:
+    view: voir
+
+  products: produits
+  product:
+    edit: Mettre à jour le produit
+    new: Créer un produit
+    created_by: proposé par
+    edit: Metre à jour mon produit
+
+  user:
+    new: Se créer un compte
+    edit: Mettre à jour mon profil
+
+  # form field
+  form:
+    firstname: Prénom
+    lastname: Nom
+
+    name: Nom
+    price: Prix
+    description: Description
+    picture: Picture
+    save: Sauvegarder
+    password: Mot de passe
+    password_confirmation: Confirmation du mot de passe
+

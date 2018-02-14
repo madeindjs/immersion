@@ -1,8 +1,8 @@
 <%= bootstrap_form_for(product, multipart: true) do |form| %>
-  <%= form.text_field :name, label: 'Nom' %>
-  <%= form.number_field :price, label: 'Prix', append: '€' %>
+  <%= form.text_field :name, label: t('form.name') %>
+  <%= form.number_field :price, label: t('form.price'), append: '€' %>
   <%= form.collection_select :category_id, Category.all, :id, :name %>
-  <%= form.text_area :description, label: 'Description' %>
-  <%= form.file_field :picture, label: 'Image' %>
-  <%= form.submit 'Sauvegarder' %>
+  <%= form.text_area :description, label: t('form.description') %>
+  <%= form.file_field :picture, label: t('form.picture') %>
+  <%= form.submit t('form.save') %>
 <% end %>

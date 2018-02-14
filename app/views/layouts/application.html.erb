@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -16,21 +16,21 @@
     <header>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
-        <%= link_to 'Immersion', home_path, class: 'navbar-brand' %>
+        <%= link_to t('project_name'), home_path, class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
-            <li class="nav-item"><%= link_to 'Catégories', categories_path, class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to t('users'), users_path, class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to t('categories'), categories_path, class: 'nav-link' %></li>
           </ul>
           <ul class="navbar-nav mt-2 mt-md-0">
             <% if current_user %>
               <li class="nav-item"><%= link_to current_user.complete_name, current_user, class: 'nav-link' %></li>
             <% else %>
-              <li class="nav-item"><%= link_to "S'inscrire", signup_path, class: 'nav-link' %></li>
-              <li class="nav-item"><%= link_to 'Se connecter', signin_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to t('signup'), signup_path, class: 'nav-link' %></li>
+              <li class="nav-item"><%= link_to t('signin'), signin_path, class: 'nav-link' %></li>
             <% end %>
           </ul>
         </div>
@@ -43,9 +43,9 @@
     <footer class="footer">
       <div class="container">
         <ul class="list-inline">
-          <li class="list-inline-item"><%= link_to "Mentions légales", legal_path %></li>
-          <li class="list-inline-item"><%= link_to "A propos", about_path %></li>
-          <li class="list-inline-item"><%= link_to "Nous contacter", contact_path %></li>
+          <li class="list-inline-item"><%= link_to t('legal_mentions'), legal_path %></li>
+          <li class="list-inline-item"><%= link_to t('about'), about_path %></li>
+          <li class="list-inline-item"><%= link_to t('contact'), contact_path %></li>
         </ul>
       </div>
     </footer>

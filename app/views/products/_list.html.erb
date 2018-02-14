@@ -4,7 +4,7 @@
       <div class="card mb-4 box-shadow">
         <img class="card-img-top" src="<%= product.picture.url %>" alt="Card image cap">
         <div class="card-body">
-          <p class="card-title"><strong><%= product.name %></strong> dans <%= link_to product.category.name, product.category %></p>
+          <p class="card-title"><strong><%= product.name %></strong> <%= t 'as' %> <%= link_to product.category.name, product.category %></p>
           <p class="card-text">
             <%= product.description %>
             <br>
