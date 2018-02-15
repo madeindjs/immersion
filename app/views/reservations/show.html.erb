@@ -1,19 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @reservation.user_id %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @reservation.product_id %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @reservation.status %>
-</p>
-
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><%= link_to t('categories'), categories_path %></li>
+    <li class="breadcrumb-item" aria-current="page"><%= link_to @reservation.product.category.name, @reservation.product.category %></li>
+    <li class="breadcrumb-item" aria-current="page"><%= link_to @reservation.product.name, @reservation.product %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= t 'reservation.reservation' %> #<%= @reservation.id %></li>
+  </ol>
+</nav>
+<h1><%= t 'reservation.reservation' %> #<%= @reservation.id %></h1>
+<%= render 'products/list', products: [@reservation.product] %>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group" aria-label="First group">
+    <%= link_to t('reservation.cancel'), @reservation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  </div>
+</div>

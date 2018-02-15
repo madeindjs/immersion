@@ -34,6 +34,13 @@ fr:
     created_by: proposé par
     edit: Metre à jour mon produit
 
+  reservation:
+    reservation: Réservation
+    cancel: Annuler la réservation
+    new: Réserver
+    for: Faire une réservation pour
+    send: Effectuer la demande
+
   user:
     new: Se créer un compte
     edit: Mettre à jour mon profil
@@ -42,6 +49,8 @@ fr:
   form:
     firstname: Prénom
     lastname: Nom
+
+    start_on: Débute le
 
     name: Nom
     price: Prix

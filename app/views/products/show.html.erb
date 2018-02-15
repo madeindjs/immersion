@@ -10,4 +10,9 @@
 <p><%= @product.description %></p>
 <p><%= t 'product.created_by' %></p>
 <%= render 'users/sticker', user: @product.user %>
-<%= link_to t('product.edit'), edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group" aria-label="Third group">
+    <%= link_to t('reservation.new'), new_reservation_path(@product.id), class: 'btn btn-primary' %>
+    <%= link_to t('product.edit'), edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>
+  </div>
+</div>

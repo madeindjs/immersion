@@ -1,32 +1,5 @@
-<%= form_with(model: reservation, local: true) do |form| %>
-  <% if reservation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
-
-      <ul>
-      <% reservation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :reservation_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product_id %>
-    <%= form.number_field :product_id, id: :reservation_product_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status, id: :reservation_status %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= bootstrap_form_for reservation do |form| %>
+  <%= form.date_field :start_on, label: t('form.start_on') %>
+  <%= form.hidden_field :product_id, value: @product.id %>
+  <%= form.submit t('reservation.send') %>
 <% end %>
