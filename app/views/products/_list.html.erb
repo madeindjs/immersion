@@ -1,23 +1,17 @@
 <div class="row">
   <% products.select{|p| p.user != nil}.each do |product| %>
     <div class="col-md-4">
-      <div class="card mb-4 box-shadow">
-        <img class="card-img-top" src="<%= product.picture.url %>" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-title"><strong><%= product.name %></strong> <%= t 'as' %> <%= link_to product.category.name, product.category %></p>
-          <p class="card-text">
-            <%= product.description %>
-            <br>
-            <small class="text-muted">de <%= link_to product.user.complete_name, product.user %></small>
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <strong><%= product.price %> €</strong>
-            <div class="btn-group">
-              <%= link_to 'voir', product, class: 'btn btn-secondary' %>
-            </div>
+      <%= link_to product, class: 'card-product' do %>
+        <div class="card mb-4 card-product">
+          <div class="card-img-top" style="background-image: url(<%= product.picture.url %>)" alt="Card image cap"></div>
+          <div class="card-body">
+            <p class="card-title"><span class="category"><%= product.category.name %></span><strong><%= product.name %></strong></p>
+            <p class="card-text">
+              <strong><%= product.price %> €</strong>
+            </p>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   <% end %>
 </div>

@@ -1,20 +1,16 @@
 <div class="row">
   <% categories.each do |category| %>
     <div class="col-md-4">
-      <div class="card mb-4 box-shadow">
-        <img class="card-img-top" src="<%= category.picture.url %>" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-title"><strong><%= category.name %></strong></p>
-          <p class="card-text">
+      <%= link_to category, class: 'media-category' do %>
+        <div class="media border border-light bg-light">
+          <div class="media-img mr-3" style="background-image: url(<%= category.picture.url %>)">
+          </div>
+          <div class="media-body">
+            <h5 class="mt-0"><%= category.name %></h5>
             <%= pluralize category.products.size, t('product.product'), t('products') %>
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <%= link_to t('button.view'), category, class: 'btn btn-secondary' %>
-            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   <% end %>
 </div>

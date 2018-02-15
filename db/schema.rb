@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20180214142838) do
     t.integer "category_id"
     t.integer "duration"
     t.index ["slug"], name: "index_products_on_slug", unique: true
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "reservation_status", force: :cascade do |t|
