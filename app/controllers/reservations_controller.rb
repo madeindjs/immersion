@@ -6,7 +6,7 @@ class ReservationsController < ApplicationController
   # GET /reservations
   # GET /reservations.json
   def index
-    @reservations = Reservation.all
+    @reservations = current_user.reservations.includes(:product)
   end
 
   # GET /reservations/1
@@ -29,10 +29,14 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
+        format.html {
+          flash[:success] = t('reservation.created.success')
+          redirect_to @reservation
+        }
         format.json { render :show, status: :created, location: @reservation }
       else
         format.html {
+          flash[:danger] = t('reservation.created.error')
           @product = @reservation.product
           render :new
         }
@@ -47,7 +51,8 @@ class ReservationsController < ApplicationController
     @reservation.destroy
     respond_to do |format|
       format.html {
-        redirect_to reservations_url, notice: 'Reservation was successfully destroyed.'
+        flash[:success] = t('reservation.destroy.success')
+        redirect_to reservations_url
       }
       format.json { head :no_content }
     end

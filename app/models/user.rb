@@ -2,6 +2,7 @@ class User < ApplicationRecord
   acts_as_authentic
 
   has_many :products
+  has_many :reservations
 
   include Authlogic::ActsAsAuthentic::EmailToken::Confirmation
 

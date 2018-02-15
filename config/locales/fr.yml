@@ -35,11 +35,21 @@ fr:
     edit: Metre à jour mon produit
 
   reservation:
+    index: Mes réservations
     reservation: Réservation
     cancel: Annuler la réservation
     new: Réserver
     for: Faire une réservation pour
     send: Effectuer la demande
+    view_product: Voir le produit
+    view: Voir la réservation
+
+    created:
+      success: La réservation a été demandée
+      error: La réservation n'a pas pu être éffectuée
+
+    destroy:
+      sucess: La réservation a été annulée 
 
   user:
     new: Se créer un compte
