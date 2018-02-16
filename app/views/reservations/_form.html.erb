@@ -1,5 +1,5 @@
 <%= bootstrap_form_for reservation do |form| %>
-  <%= form.datetime_field :start_on, label: t('form.start_on') %>
+  <%= form.datetime_field :start_on, label: t('form.start_on'), class: 'datetimepicker' %>
   <%= form.number_field :persons, label: t('form.persons') %>
   <%= form.hidden_field :product_id, value: @product.id %>
   <%= form.submit t('reservation.send') %>
