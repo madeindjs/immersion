@@ -8,4 +8,14 @@ class ReservationStatus < ApplicationRecord
   }
 
   belongs_to :reservation
+
+
+  def color
+    return 'danger' if self.canceled?
+    return 'info' if self.requested?
+    return 'warning' if self.approved?
+    return 'success' if self.paid?
+    return 'secondary' if self.archived?
+  end
+
 end

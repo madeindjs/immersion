@@ -11,7 +11,7 @@
           <div class="card-img-top" style="background-image: url(<%= reservation.product.picture.url %>)" alt="Card image cap"></div>
         <% end %>
         <div class="card-body">
-          <p class="card-title"><%= link_to reservation.product.name, reservation.product %></p>
+          <p class="card-title"><%= link_to reservation.product.name, reservation.product %> <%= status_badge reservation %></p>
           <p class="card-text">
             <%= t 'product.start_on' %> <%= reservation.start_on.strftime("%H:%M %d/%m/%Y") %>
             <br>

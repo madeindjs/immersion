@@ -6,6 +6,10 @@ class Reservation < ApplicationRecord
   after_create :create_initial_status
 
 
+  def current_status
+    self.reservation_statuses.last
+  end
+
   def total_price_without_charge
     self.product.price * self.persons
   end
