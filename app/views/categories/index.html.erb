@@ -1,8 +1,27 @@
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active " aria-current="page">Prestations</li>
-  </ol>
-</nav>
-<h1><%= t('categories') %></h1>
-<p class="lead"><%= t 'lorem' %></p>
-<%= render 'list', categories: @categories %>
+<div class="row">
+  <div class="col">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active " aria-current="page">Prestations</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h1><%= t('categories') %></h1>
+    <p class="lead"><%= t 'lorem' %></p>
+    <%= render 'list', categories: @categories %>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <% @categories.each do |category| %>
+      <div class="py-5">
+        <h2><%= link_to category.name, category %></h2>
+        <%= render 'products/list', products: category.products.limit(8) %>
+        <%= link_to t('see_more'), category, class: 'btn btn-primary btn-lg float-right' %>
+      </div>
+    <% end %>
+  </div>
+</div>

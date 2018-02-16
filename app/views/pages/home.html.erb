@@ -1,10 +1,21 @@
-<div class="col mb-5">
-  <h2><%= t 'categories' %></h2>
-  <p class="lead"><%= t 'page.home.products_h2_description' %></p>
-  <%= render 'categories/list', categories: @categories %>
+<div class="row">
+  <div class="col">
+    <div class="h-75 d-inline-block">
+      az
+    </div>
+  </div>
 </div>
-<div class="col mb-5">
-  <h2><%= t 'products' %></h2>
-  <p class="lead"><%= t 'page.home.categories_h2_description' %></p>
-  <%= render 'products/list', products: @products %>
+<div class="row">
+  <div class="col mb-5">
+    <h2><%= t 'categories' %></h2>
+    <p class="lead"><%= t 'page.home.products_h2_description' %></p>
+    <%= render 'categories/list', categories: @categories %>
+  </div>
+</div>
+<div class="row">
+  <div class="col mb-5">
+    <h2><%= t 'products' %></h2>
+    <p class="lead"><%= t 'page.home.categories_h2_description' %></p>
+    <%= render 'products/list', products: @products %>
+  </div>
 </div>

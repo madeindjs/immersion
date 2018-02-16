@@ -7,23 +7,30 @@
 </nav>
 <div class="cover mb-5" style="background-image: url(<%=  @product.picture.url %>)"></div>
 <div class="row">
-  <div class="col-10">
-    <p class="mb-0"><span class="category text-<%= @product.category.color %>"><%= @product.category.name %></span></p>
-    <h1><%= @product.name %></h1>
-  </div>
-  <div class="col-2">
-    <%= render 'users/sticker', user: @product.user %>
-  </div>
-</div>
-<div class="row">
-  <div class="col">
-    <h2><%= t 'product.description' %></h2>
-    <p><%= @product.description %></p>
-    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group" role="group" aria-label="Third group">
-        <%= link_to t('reservation.new'), new_reservation_path(@product.id), class: 'btn btn-primary btn-lg' %>
+  <div class="col-8">
+    <!-- title -->
+    <div class="row">
+      <div class="col-10">
+        <p class="mb-0"><span class="category text-<%= @product.category.color %>"><%= @product.category.name %></span></p>
+        <h1><%= @product.name %></h1>
         <%= link_to t('product.edit'), edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>
       </div>
+      <div class="col-2">
+        <%= render 'users/sticker', user: @product.user %>
+      </div>
+    </div>
+    <!-- description -->
+    <div class="row">
+      <div class="col">
+        <h2><%= t 'product.description' %></h2>
+        <p><%= @product.description %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="border p-2">
+      <h2><strong><%= @product.price %></strong> <small><%= t 'product.price_unit' %></small></h2>
+      <%= render 'reservations/form', reservation: Reservation.new %>
     </div>
   </div>
 </div>

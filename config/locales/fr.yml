@@ -48,12 +48,30 @@ fr:
     view_product: Voir le produit
     view: Voir la réservation
 
+    price: Prix
+    price_unit: €
+    persons: nombre 
+    service_charges: Frais de service
+
+    reservation_statuses: Historique
+
     created:
       success: La réservation a été demandée
       error: La réservation n'a pas pu être éffectuée
 
     destroy:
       sucess: La réservation a été annulée 
+
+  reservation_status:
+    status: Etat
+    created_at: Date
+
+
+    canceled: Annulation
+    requested: Demande éffectuée
+    approved: Approvée
+    paid: Payée
+    archived: Archivée
 
   user:
     new: Se créer un compte

@@ -1,6 +1,6 @@
 <div class="row">
   <% products.select{|p| p.user != nil}.each do |product| %>
-    <div class="col-md-6 col-lg-4">
+    <div class="col-xs-1 col-md-6 col-lg-4 col-xl-3">
       <%= link_to product, class: 'card-product' do %>
         <div class="card card-product my-3">
           <div class="card-img-top" style="background-image: url(<%= product.picture.url %>)" alt="Card image cap"></div>

@@ -1,6 +1,16 @@
 <%= bootstrap_form_for reservation do |form| %>
-  <%= form.datetime_field :start_on, label: t('form.start_on'), class: 'datetimepicker' %>
-  <%= form.number_field :persons, label: t('form.persons') %>
   <%= form.hidden_field :product_id, value: @product.id %>
-  <%= form.submit t('reservation.send') %>
+  <div class="row">
+    <div class="col">
+      <%= form.datetime_field :start_on, label: t('form.start_on'), class: 'datetimepicker' %>
+    </div>
+    <div class="col">
+      <%= form.number_field :persons, label: t('form.persons') %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <%= form.submit t('reservation.send'), class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
 <% end %>
