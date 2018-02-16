@@ -3,6 +3,7 @@ class CreateReservations < ActiveRecord::Migration[5.1]
     create_table :reservations do |t|
       t.integer :user_id
       t.integer :product_id
+      t.integer :persons, not_null: true, default: 1
       t.datetime :start_on, not_null: true
 
       t.timestamps

@@ -26,13 +26,17 @@ fr:
   button:
     view: voir
 
-  products: produits
+  products: Produits
   product:
     product: produit
     edit: Mettre à jour le produit
     new: Créer un produit
     created_by: proposé par
     edit: Metre à jour mon produit
+
+    price_unit: € par personne
+
+    start_on: Débute le
 
   reservation:
     index: Mes réservations
@@ -62,6 +66,8 @@ fr:
 
     start_on: Débute le
 
+    persons: Nombre de personnes
+
     name: Nom
     price: Prix
     description: Description
@@ -73,10 +79,8 @@ fr:
 
   page:
     home:
-      jumbotron_lead: >
-        Immersion est un concept de voyage culturel à domicile: il s'agit d'une découverte de cultures et de savoirs-faire étrangers à travers une interaction humaine.
-        more: En savoir plus
-      more: En savoir plus
+      products_h2_description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      categories_h2_description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     about:
       project: Le projet

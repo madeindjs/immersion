@@ -1,9 +1,9 @@
-<div class="col-md-4">
-  <div class="card mb-4 box-shadow">
-    <img class="card-img-top" src="<%= user.picture %>" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"><%= link_to user.complete_name, user %></h5>
-      <p class="card-text"><%= pluralize user.products.size, t('products') %></p>
-    </div>
-  </div>
-</div>
+<%= link_to user do %>
+  <figure class="figure user-rounded">
+    <%= image_tag user.picture, class: 'figure-img img-fluid rounded-circle',alt: "picture of %s" % user.complete_name %>
+    <figcaption class="figure-caption text-center">
+      <strong><%= user.complete_name %></strong><br>
+      <%= pluralize user.products.size, t('products') %>
+    </figcaption>
+  </figure>
+<% end %>

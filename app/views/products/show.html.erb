@@ -5,14 +5,25 @@
     <li class="breadcrumb-item active" aria-current="page"><%= @product.name %></li>
   </ol>
 </nav>
-<div class="cover" style="background-image: url(<%=  @product.picture.url %>)"></div>
-<h1><%= @product.name %></h1>
-<p><%= @product.description %></p>
-<p><%= t 'product.created_by' %></p>
-<%= render 'users/sticker', user: @product.user %>
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group" role="group" aria-label="Third group">
-    <%= link_to t('reservation.new'), new_reservation_path(@product.id), class: 'btn btn-primary' %>
-    <%= link_to t('product.edit'), edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>
+<div class="cover mb-5" style="background-image: url(<%=  @product.picture.url %>)"></div>
+<div class="row">
+  <div class="col-10">
+    <p class="mb-0"><span class="category text-<%= @product.category.color %>"><%= @product.category.name %></span></p>
+    <h1><%= @product.name %></h1>
+  </div>
+  <div class="col-2">
+    <%= render 'users/sticker', user: @product.user %>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h2><%= t 'product.description' %></h2>
+    <p><%= @product.description %></p>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group" role="group" aria-label="Third group">
+        <%= link_to t('reservation.new'), new_reservation_path(@product.id), class: 'btn btn-primary btn-lg' %>
+        <%= link_to t('product.edit'), edit_product_path(@product), class: 'btn btn-warning' if @product.user == current_user %>
+      </div>
+    </div>
   </div>
 </div>

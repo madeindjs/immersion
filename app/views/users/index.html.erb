@@ -6,6 +6,10 @@
 <h1><%= t 'users' %></h1>
 <div class="row">
   <% @users.each do |user| %>
-    <%= render 'users/sticker', user: user %>
+    <div class="col-3">
+      <div class="p-2">
+        <%= render 'users/sticker', user: user %>
+      </div>
+    </div>
   <% end %>
 </div>

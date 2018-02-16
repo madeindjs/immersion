@@ -16,7 +16,7 @@
   <body>
     <header>
       <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
         <%= link_to t('project_name'), home_path, class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,9 +38,11 @@
         </div>
       </nav>
     </header>
-    <main role="main" class="container">
+    <main role="main" class="container-fluid mt-2 pt-2">
       <%= render 'shared/flash' %>
-      <%= yield %>
+      <div class="px-2">
+        <%= yield %>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">

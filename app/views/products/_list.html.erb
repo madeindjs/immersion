@@ -1,15 +1,19 @@
 <div class="row">
   <% products.select{|p| p.user != nil}.each do |product| %>
-    <div class="col-md-4">
+    <div class="col-md-6 col-lg-4">
       <%= link_to product, class: 'card-product' do %>
-        <div class="card card-product my-2">
+        <div class="card card-product my-3">
           <div class="card-img-top" style="background-image: url(<%= product.picture.url %>)" alt="Card image cap"></div>
           <div class="card-body">
             <p class="card-title"><span class="category text-<%= product.category.color %>">
                 <%= product.category.name %></span>
               <strong><%= product.name %></strong>
             </p>
-            <p class="card-text"><%= product.price %> €</p>
+            <p class="card-text">
+              <%= product.price %> <%= t 'product.price_unit' %>
+              <br>
+              <%= render 'shared/stars' %>
+            </p>
           </div>
         </div>
       <% end %>
