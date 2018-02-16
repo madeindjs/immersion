@@ -3,9 +3,11 @@
 one:
   user_id: 1
   product_id: 1
+  persons: 1
   start_on: 2018-01-01 12:00:00
 
 two:
   user_id: 1
   product_id: 1
+  persons: 1
   start_on: 2018-01-01 12:00:00

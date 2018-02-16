@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 20180214142838) do
     t.index ["slug"], name: "index_products_on_slug", unique: true
   end
 
-  create_table "reservation_status", force: :cascade do |t|
+  create_table "reservation_statuses", force: :cascade do |t|
     t.integer "reservation_id"
     t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["reservation_id"], name: "index_reservation_status_on_reservation_id"
+    t.index ["reservation_id"], name: "index_reservation_statuses_on_reservation_id"
   end
 
   create_table "reservations", force: :cascade do |t|

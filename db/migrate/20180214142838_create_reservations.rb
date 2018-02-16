@@ -11,7 +11,7 @@ class CreateReservations < ActiveRecord::Migration[5.1]
 
     add_column :products, :duration, :integer
 
-    create_table :reservation_status do |t|
+    create_table :reservation_statuses do |t|
       t.belongs_to :reservation, index: true
       t.integer :status, default: 0, not_null: true
       t.timestamps
