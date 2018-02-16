@@ -6,7 +6,7 @@
           <div class="media-img mr-3" style="background-image: url(<%= category.picture.url %>)">
           </div>
           <div class="media-body">
-            <h5 class="mt-0"><%= category.name %></h5>
+            <strong><%= category.name %></strong>
             <%= pluralize category.products.size, t('product.product'), t('products') %>
           </div>
         </div>
