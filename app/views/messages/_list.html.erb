@@ -1,0 +1,11 @@
+<% messages.each do |message| %>
+  <blockquote class="blockquote message">
+    <p class="mb-0 bg-<%= message.user == current_user ? 'secondary': 'light' %>">
+      <%= message.content %>
+    </p>
+    <footer class="blockquote-footer">
+      <%= link_to message.user.complete_name, message.user %>
+      <cite title="Source Title">Source Title</cite>
+    </footer>
+  </blockquote>
+<% end %>

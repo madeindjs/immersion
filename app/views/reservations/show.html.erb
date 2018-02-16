@@ -17,8 +17,9 @@
 </div>
 <div class="row">
   <div class="col">
-    <h1><%= t 'reservation.messages' %> #<%= @reservation.id %></h1>
-    <p><%= t 'lorem' %></p>
+    <h2><%= t 'reservation.messages' %></h2>
+    <%= render 'messages/list', messages: @reservation.messages %>
+    <p><%= render 'messages/form', message: Message.new(reservation_id: @reservation.id) %></p>
   </div>
 </div>
 <div class="row">

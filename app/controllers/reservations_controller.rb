@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :set_reservation, only: [:edit, :update, :destroy]
   before_action :check_login
   before_action :check_owner, only: [:destroy]
 
@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/1
   # GET /reservations/1.json
   def show
+    @reservation = Reservation.includes(:product, :messages).find(params[:id])
   end
 
   # GET /reservations/new

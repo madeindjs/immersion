@@ -26,6 +26,13 @@ fr:
   button:
     view: voir
 
+  message:
+    submit: Envoyer
+
+    create:
+      success: Le message a été envoyé
+      error: Le message n'a pas put être envoyé
+
   products: Produits
   product:
     product: produit

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages
   resources :reservations, only: [:index, :show, :create, :destroy]
   # sugar URL
   get "products/:id/reservation" => "reservations#new", as: 'new_reservation'

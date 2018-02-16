@@ -1,5 +1,6 @@
 class Reservation < ApplicationRecord
   has_many :reservation_statuses
+  has_many :messages
   belongs_to :product
   belongs_to :user
 

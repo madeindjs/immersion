@@ -1,0 +1,5 @@
+<%= bootstrap_form_for message do |form| %>
+  <%= form.text_area :content, hide_label: true %>
+  <%= form.hidden_field :reservation_id %>
+  <%= form.submit t('message.submit') , class: 'btn btn-primary float-right' %>
+<% end %>
