@@ -1,38 +1,25 @@
-# README
+# Immersion
 
-## Developpment environnement
+## Instalation
 
-Use Maildev
+### Developpment environnement
 
-~~~bash
+Install [RVM](https://rvm.io/) then
+
+Use [Maildev](https://www.npmjs.com/package/maildev)
+
+```bash
 $ npm install -g maildev
-~~~
+```
 
-## Dependencies
+### Dependencies
 
-~~~bash
+```bash
 $ sudo apt install nodejs libmagickwand-dev
-~~~
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Todos
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [ ] Newsletter system
+* [ ] Google map preview
+* [ ] Search engine for products
