@@ -6,10 +6,23 @@
 
 Install [RVM](https://rvm.io/) then
 
+```bash
+$ rvm install 2.3
+```
+
+Clone this repository & install gems
+
+```bash
+$ git clone https://github.com/madeindjs/immersion.git
+$ cd immersion
+$ bundle install
+```
+
 Use [Maildev](https://www.npmjs.com/package/maildev)
 
 ```bash
 $ npm install -g maildev
+$ maildev
 ```
 
 ### Dependencies
