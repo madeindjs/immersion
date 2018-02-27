@@ -1,0 +1,4 @@
+<%= bootstrap_form_for newsletter do |form| %>
+  <%= form.text_field :email, id: :newsletter_email, class: 'form-control-lg' %>
+  <%= form.submit t('newsletter.new'), class: 'btn btn-lg btn-primary' %>
+<% end %>

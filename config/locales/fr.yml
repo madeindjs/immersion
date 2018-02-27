@@ -57,7 +57,7 @@ fr:
 
     price: Prix
     price_unit: €
-    persons: nombre 
+    persons: nombre
     service_charges: Frais de service
 
     reservation_statuses: Historique
@@ -67,7 +67,7 @@ fr:
       error: La réservation n'a pas pu être éffectuée
 
     destroy:
-      sucess: La réservation a été annulée 
+      sucess: La réservation a été annulée
 
   reservation_status:
     status: Etat
@@ -112,6 +112,14 @@ fr:
       project_content: >
         Immersion est un concept de voyage culturel à domicile : il s'agit d'une découverte de cultures et de savoirs-faire étrangers à travers une interaction humaine . Cet échange culturel se fait entre une personne(guide) qui souhaite partager son savoir faire ou son talent et le client qui souhaite le découvrir. La découverte culturelle se fait au domicile du client ou au domicile du guide. Le client étant toute personne avide de culture et le guide étant toute personne issue de la diversité ethnique française souhaitant faire découvrir son patrimoine culturel . Cette offre est proposée contre une rémunération donnée par le client à la plateforme d'immersion. Immersion récupère un pourcentage et rémunère ensuite le prestataire avec le montant qui reste. La transaction s'opère à partir du site de Immersion. C'est donc un site qui offre en quelques clics la possibilité de découvrir des cultures étrangères à travers des prestations à choisir.L'offre d'immersion se construit autour de prestations telles que: les ateliers culinaires, ateliers de danse, apprentissage d'instrument de musique ,art appliqué, mode ,contes et légendes etc pouvant être réalisées sur une journée. Immersion est au stade de concept alors nous souhaitons avoir vos premières impressions
 
+
+  newsletter:
+    title: Newsletter
+    new: S'inscrire à la Newsletter
+    create:
+      success: Votre addresse a été ajoutée à la newsletter
+      error: Une erreur est survenue
+
     legal:
       code_of_ethic: Une Charte Éthique, pourquoi ?
       code_of_ethic_content: >
@@ -128,7 +136,7 @@ fr:
       personal_and_private_life: Équilibre vie privée et vie professionnelle
       personal_and_private_life_content: >
         Immersion est attachée à proposer les conditions d’un équilibre entre vie privée et vie professionnelle. Il favorise donc le dialogue et l’écoute entre différents collaborateurs (guides, voyageurs, et membre de ma plateforme) aﬁn d’organiser au mieux le travail en fonction des obligations et des attentes de chacun. L’entreprise souhaite proposer un environnement de travail où le bien-être de chacun a sa place et fait l’objet d’un véritable souci. Car le but d’Immersion est d’être dans la convivialité et surtout découvrir l’autre.
-      discrimination: Discrimination 
+      discrimination: Discrimination
       discrimination_content: >
         Immersion est attachée à la diversité de ses collaborateurs, Immersion permet de découvrir les autres cultures locales ou internationales. Elle s’engage à ne faire aucune discrimination, directe ou indirecte, en matière de relation et de condition de travail fondée, entre autres, sur l’âge, la couleur, l’état matrimonial, le handicap, la nationalité, l’orientation sexuelle, l’origine ethnique ou sociale, la race, la religion, et le sexe. Cette politique de lutte contre les discriminations s’applique non seulement à l’embauche du guide mais perdure également durant les différentes prestations. Chaque collaborateur dispose de la liberté de prendre part, à titre personnel, à des activités ou des organisations, notamment de type politique ou religieux.
       harassment: Harcèlement
@@ -146,12 +154,12 @@ fr:
         Immersion s’assure de traiter honnêtement ses clients (guides ou voyageurs) , notamment en transmettant des informations nécessaires sur ses services et en faisant preuve d’ouverture sur les questions qui leurs  sont liées. La qualité des informations transmises aux différents publics fait partie de la relation de conﬁance et de transparence qu’Immersion souhaite instaurer et faire perdurer.
       conflicts_of_interest: Conflits d’intérêts
       conflicts_of_interest_content: >
-        Chacun doit éviter les situations où des intérêts personnels peuvent entrer en conﬂit avec ceux d’Immersion et qui pourraient nuire à l’esprit d’Immersion. L’objectivité doit guider chacun dans ses relations avec les différents collaborateurs de l’entreprise. De telles relations ne doivent ni s’engager, ni être inﬂuencées par des éléments personnels ; il appartient à chacun de veiller à conserver cette objectivité dans les relations qui perdurent. Tout conﬂit potentiel doit être révélé aﬁn de permettre à la société de le prévenir ou de le résoudre. De plus, l’entreprise met tout en œuvre pour empêcher la corruption, et s’implique en pratique dans la mise en place d’une politique responsable dépendant du respect du principe de légalité. 
+        Chacun doit éviter les situations où des intérêts personnels peuvent entrer en conﬂit avec ceux d’Immersion et qui pourraient nuire à l’esprit d’Immersion. L’objectivité doit guider chacun dans ses relations avec les différents collaborateurs de l’entreprise. De telles relations ne doivent ni s’engager, ni être inﬂuencées par des éléments personnels ; il appartient à chacun de veiller à conserver cette objectivité dans les relations qui perdurent. Tout conﬂit potentiel doit être révélé aﬁn de permettre à la société de le prévenir ou de le résoudre. De plus, l’entreprise met tout en œuvre pour empêcher la corruption, et s’implique en pratique dans la mise en place d’une politique responsable dépendant du respect du principe de légalité.
 
       representing_society: Représenter la société
       representing_society_content: >
         Chaque collaborateur est ambassadeur d’Immersion, Il est donc important d’agir avec discernement en accord avec les valeurs et les intérêts d’Immersion et de veiller à ce que la distinction entre ses opinions ou ses intérêts personnels et ceux d’Immersion soit explicite. Chaque collaborateur engage ainsi la réputation de l’entreprise et veillera à ne pas tenir de propos préjudiciables à l’image d’Immersion.
 
-      practical_aspects: Aspects pratiques 
+      practical_aspects: Aspects pratiques
       practical_aspects_content: >
         Le délai de rétractation  des prestataires dans le cas d’une urgence de dernière minutes  est de 3 jours avant la prestation. Autrement un prélèvement sera effectué sur la recette de la prochaine prestation. Si les rétractations se multiplient dans l’avenir , cela pourrait  entraîner la suspension définitive du partenariat avec le prestataire.
