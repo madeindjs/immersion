@@ -69,7 +69,7 @@ Rails.application.configure do
     address:              'ssl0.ovh.net',
     port:                 465,
     domain:               'ssl0.ovh.net',
-    user_name:            'immersion@rousseau-alexandre.de',
+    user_name:            'immersion@rousseau-alexandre.fr',
     password:             Rails.application.secrets.email_password,
     authentication:       :plain,
     enable_starttls_auto: true ,
