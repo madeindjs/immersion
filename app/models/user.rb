@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :products
   has_many :reservations
+  before_create :add_to_newsletter
 
   include Authlogic::ActsAsAuthentic::EmailToken::Confirmation
 
@@ -68,6 +69,12 @@ class User < ApplicationRecord
       givenName: self.lastname,
       url: url
     }
+  end
+
+  private
+
+  def add_to_newsletter
+    Newsletter.create email: self.email
   end
 
 end
