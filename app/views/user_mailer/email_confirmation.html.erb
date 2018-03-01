@@ -5,7 +5,13 @@
   </head>
   <body>
     <h1>Bienvenue sur <%= link_to 'Immersion' , root_url %></h1>
-    <p><strong>Votre compte a été crée avec succès</strong>. Votre iddentifiant est <strong><%= @user.email %></strong>, connectez vous via <%= link_to nil, signin_url %>.</p>
+    <p><strong>Votre compte a été crée avec succès</strong>.</p>
+    <table>
+      <tr>
+        <th>Iddentifiant</th>
+        <td><%= @user.email %></td>
+      </tr>
+    </table>
     <p>Confirmez votre addresse mail en cliquant sur ce lien: <%= link_to nil, @url %>.</p>
     <br>
     <p>Merci de votre confiance.</p>
