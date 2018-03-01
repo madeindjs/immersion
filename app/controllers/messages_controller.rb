@@ -22,7 +22,6 @@ class MessagesController < ApplicationController
         }
         format.json { render :show, status: :created, location: @message }
       else
-        puts @message.errors.inspect
         format.html {
           flash[:success] = t('message.create.success')
           redirect_to @message.reservation

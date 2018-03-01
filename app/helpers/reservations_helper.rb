@@ -5,7 +5,7 @@ module ReservationsHelper
     ('<span class="badge badge-%s">%s</span>' % [
        current_status.color,
        t("reservation_status.#{current_status.status}")
-    ]).html_safe
+    ]).html_safe if current_status
   end
 
 end

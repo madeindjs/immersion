@@ -15,7 +15,7 @@ class NewslettersControllerTest < ActionDispatch::IntegrationTest
       post newsletters_url, params: { newsletter: { email: @newsletter.email } }
     end
 
-    assert_redirected_to newsletter_url(Newsletter.last)
+    assert_redirected_to home_url
   end
 
   test "should destroy newsletter" do
@@ -23,6 +23,6 @@ class NewslettersControllerTest < ActionDispatch::IntegrationTest
       delete newsletter_url(@newsletter)
     end
 
-    assert_redirected_to newsletters_url
+    assert_redirected_to home_url
   end
 end
