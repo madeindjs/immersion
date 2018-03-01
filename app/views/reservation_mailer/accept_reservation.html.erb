@@ -1,0 +1,11 @@
+<p>Bonjour <%= @reservation.product.user.complete_name %>,</p>
+<p>Vous venez de recevoir une nouvelle réservation pour <%= link_to @reservation.product.name, reservation_url(@reservation.product)%> de la part de <%= link_to @reservation.user.complete_name, @reservation.user %>:</p>
+<p>Vous pouvez accepter ou refuser cette réservation</p>
+
+
+<table>
+	<tr>
+		<td><a href="#">Accepter</a></td>
+		<td><a href="#">Refuser</a></td>
+	</tr>
+</table>
