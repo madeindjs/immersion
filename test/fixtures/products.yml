@@ -7,3 +7,9 @@ one:
   category_id: 1
   price: 5.55
 
+product_of_my_girlfriend:
+  id: 2
+  name: MyString
+  user_id: 2
+  category_id: 1
+  price: 5.55

@@ -6,8 +6,8 @@ one:
   persons: 1
   start_on: 2018-01-01 12:00:00
 
-two:
+my_reservation_for_product_of_my_girlfriend:
   user_id: 1
-  product_id: 1
+  product_id: 2
   persons: 1
   start_on: 2018-01-01 12:00:00
