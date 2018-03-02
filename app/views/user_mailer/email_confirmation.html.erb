@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Bienvenue sur <%= link_to 'Immersion' , root_url %></h1>
-    <p><strong>Votre compte a été crée avec succès</strong>.</p>
-    <table>
-      <tr>
-        <th>Iddentifiant</th>
-        <td><%= @user.email %></td>
-      </tr>
-    </table>
-    <p>Confirmez votre addresse mail en cliquant sur ce lien: <%= link_to nil, @url %>.</p>
-    <br>
-    <p>Merci de votre confiance.</p>
-    <footer>
-      <hr/>
-      <p>En cas de problème, n'hésitez pas à contacter le support via cette addresse mail.</p>
-    </footer>
-  </body>
-</html>
+
+<p><strong>Bienvenue sur <%= link_to 'Immersion' , root_url %></strong>, Votre compte a été crée avec succès.</p>
+<ul>
+  <li><strong>Iddentifiant:</strong> <%= @user.email %></li>
+</ul>
+<p>Confirmez votre addresse mail en cliquant sur ce lien: <%= link_to nil, @url %>.</p>
+<hr/>
+<small>En cas de problème, n'hésitez pas à contacter le support via cette addresse mail.</small>

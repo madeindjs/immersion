@@ -74,11 +74,11 @@ fr:
     created_at: Date
 
 
-    canceled: Annulation
-    requested: Demande éffectuée
-    approved: Approvée
-    paid: Payée
-    archived: Archivée
+    canceled: annulé
+    requested: en attente de valitation
+    approved: approuvée
+    paid: payée
+    archived: archivée
 
   user:
     new: Se créer un compte

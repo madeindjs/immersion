@@ -1,0 +1,4 @@
+<p><%= link_to @message.user.complete_name, @message.user %> vous à envoyé</p>
+<blockquote><%= @message.content %></blockquote>
+<p>La réservation est actuellement <strong><%= t "reservation_status.%s" % @message.reservation.current_status.status %></strong>. <%= link_to 'Voir la réservation', @message.reservation %></p>
+

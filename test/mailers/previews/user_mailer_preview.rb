@@ -2,7 +2,7 @@
 class UserMailerPreview < ActionMailer::Preview
 
   def email_confirmation
-    UserMailer.email_confirmation User.new(email: "alex@alex.fr", firstname: "Rousseau", lastname: 'Alexandre', email_token: 'azerty')
+    UserMailer.email_confirmation User.new(email: "alex@alex.fr", firstname: "Rousseau", lastname: 'Alexandre', email_token: 'azerty'), nil
   end
 
   def contact

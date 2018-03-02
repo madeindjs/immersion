@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
     @message.user_id = current_user.id
 
     respond_to do |format|
+      ReservationMailer.new_message(@message).deliver_now
       if @message.save
         format.html {
           flash[:success] = t('message.create.success')

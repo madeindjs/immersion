@@ -30,6 +30,7 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
+        ReservationMailer.accept_reservation(@reservation).deliver_now
         format.html {
           flash[:success] = t('reservation.created.success')
           redirect_to @reservation
