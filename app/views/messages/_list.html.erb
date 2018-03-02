@@ -1,6 +1,6 @@
 <% messages.each do |message| %>
-  <blockquote class="blockquote message">
-    <p class="mb-0 bg-<%= message.user == current_user ? 'secondary': 'light' %>">
+  <blockquote class="blockquote message alert alert-<%= message.user == current_user ? 'warning float-right': 'info float-left' %>">
+    <p class="mb-0">
       <%= message.content %>
     </p>
     <footer class="blockquote-footer">

@@ -50,15 +50,15 @@
     <table class="table">
       <tr>
         <td><%= @reservation.product.price %> <%= t 'product.price_unit' %> * <%= @reservation.persons %> <%= t 'reservation.persons' %></td>
-        <th><%= @reservation.total_price_without_charge %> <%= t 'reservation.price_unit' %></th>
+        <th><%= @reservation.total_price_without_charge.round 2 %> <%= t 'reservation.price_unit' %></th>
       </tr>
       <tr>
         <td><%= t 'reservation.service_charges' %></td>
-        <th><%= @reservation.price_of_service_charges %> <%= t 'reservation.price_unit' %></th>
+        <th><%= @reservation.price_of_service_charges.round 2 %> <%= t 'reservation.price_unit' %></th>
       </tr>
       <tr class="table-secondary">
         <td><%= t 'reservation.total_price' %></td>
-        <th><%= @reservation.total_price %> <%= t 'reservation.price_unit' %></th>
+        <th><%= @reservation.total_price.round 2 %> <%= t 'reservation.price_unit' %></th>
       </tr>
     </table>
   </div>
