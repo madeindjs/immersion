@@ -1,14 +1,41 @@
-<div class="row">
+<section class="row text-center py-5 mb-5">
+  <div class="col">
+    <h1 class="my-5 display-3"><%= t 'landing.big_punchline_description' %></h1>
+    <p class="lead"><%= t 'landing.big_punchline_description_content' %></p>
+    <p class="alert alert-warning"><%= t 'landing.warning-beta' %></p>
+    <%= bootstrap_form_with url: products_path, layout: :inline, html: {class: 'justify-content-center'} do |form| %>
+      <%= form.text_field :test, class: 'form-control-lg', hide_label: true, placeholder: 'Repas camerounais' %>
+      <%= form.collection_select :category_id, Category.all, :id, :name,{hide_label: true}, {class: 'form-control-lg'} %>
+      <%= form.submit 'Rechercher', class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  </div>
+</section>
+<section class="row text-center border-top text-center py-5">
+  <% ['one', 'two', 'three'].each do |i| %>
+    <div class="col">
+      <h3><%= t "landing.argument.#{i}.title" %></h3>
+      <p class="lead"><%= t "landing.argument.#{i}.description" %></p>
+    </div>
+  <% end %>
+</div>
+</section>
+<section class="row text-center border-top py-5">
   <div class="col mb-5">
-    <h2><%= t 'categories' %></h2>
-    <p class="lead"><%= t 'page.home.products_h2_description' %></p>
+    <h2 class="display-4"><%= t 'categories' %></h2>
+    <p class="lead pb-2"><%= t 'page.home.products_h2_description' %></p>
     <%= render 'categories/list', categories: @categories %>
   </div>
-</div>
-<div class="row">
+</section>
+<section class="row text-center border-top py-5">
   <div class="col mb-5">
-    <h2><%= t 'products' %></h2>
-    <p class="lead"><%= t 'page.home.categories_h2_description' %></p>
+    <h2 class="display-4"><%= t 'products' %></h2>
+    <p class="lead pb-2"><%= t 'page.home.categories_h2_description' %></p>
     <%= render 'products/list', products: @products %>
   </div>
-</div>
+</section>
+<section class="row text-center border-top py-5">
+  <div class="col">
+    <h2><%= t 'landing.stay_tuned' %></h2>
+    <%= render 'newsletters/form' %>
+  </div>
+</section>

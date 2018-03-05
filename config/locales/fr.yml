@@ -163,3 +163,19 @@ fr:
       practical_aspects: Aspects pratiques
       practical_aspects_content: >
         Le délai de rétractation  des prestataires dans le cas d’une urgence de dernière minutes  est de 3 jours avant la prestation. Autrement un prélèvement sera effectué sur la recette de la prochaine prestation. Si les rétractations se multiplient dans l’avenir , cela pourrait  entraîner la suspension définitive du partenariat avec le prestataire.
+
+  landing:
+    big_punchline_description: Voyagez près de chez vous
+    big_punchline_description_content: Découvrez nos expériences culinaires chez l'habitant
+    warning-beta: Le projet est en cours de construction
+
+    argument:
+      one:
+        title: Découvrez
+        description: Un cours de cuisine à Rome, un dîner sur un toit-terrasse à Barcelone, un évènement privé à Londres... Parcourez nos expériences culinaires avec des hôtes passionnés.
+      two:
+        title: Réservez
+        description: Choisissez votre expérience culinaire préférée et réservez la date qui vous convient le mieux. Ensuite vous pourrez contacter directement votre hôte
+      three:
+        title: Profitez
+        description: Immergez-vous dans la gastronomie et la culture locale, rencontrez d'autres voyageurs autour d'un repas partagé et découvrez la magie d'une expérience unique
