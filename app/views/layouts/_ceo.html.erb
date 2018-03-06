@@ -1,0 +1,23 @@
+<% @title = t('default.title') unless @title %>
+<% @description = t('default.description') unless @description %>
+<!-- title -->
+<title><%= @title %></title>
+<meta property="og:title" content="<%= @title %>">
+<!-- description -->
+<meta name="description" content="<%= @description %>" />
+<meta property="og:description" content="<%= @description %>" >
+<!-- language -->
+<meta name="language" content="fr_FR" />
+<meta name="og:locale" content="fr_FR" />
+<!-- canonical -->
+<%= canonical_tag =%>
+<!-- keys words -->
+<!-- my informations -->
+<meta name="email" content="contact@rousseau-alexandre.fr">
+<meta name="author" content="ROUSSEAU Alexandre">
+<meta name="publisher" content="ROUSSEAU Alexandre">
+<!-- social networks ID -->
+<!-- <meta property="fb:app_id" content="1672575099670561"> -->
+<!-- Open Graph required fields -->
+<meta property="og:site_name" content="Immersion">
+<meta property="og:url" content="Immersion">

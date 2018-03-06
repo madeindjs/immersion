@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# SEO stuff
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+
 gem 'friendly_id'
 # PICTURE
 gem 'carrierwave'

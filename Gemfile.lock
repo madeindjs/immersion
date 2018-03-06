@@ -7,6 +7,13 @@ GIT
       rails (>= 5.0)
 
 GIT
+  remote: https://github.com/jumph4x/canonical-rails.git
+  revision: f18f38060aa44485c1edd126473336d31a4fd33f
+  specs:
+    canonical-rails (0.2.2)
+      rails (>= 4.1, < 5.2)
+
+GIT
   remote: https://github.com/stympy/faker.git
   revision: 679fd508c9f41f41b6df62024d67bc2281953395
   branch: master
@@ -242,6 +249,7 @@ DEPENDENCIES
   authlogic_email_token
   bootstrap_form!
   byebug
+  canonical-rails!
   capistrano
   capistrano-bundler
   capistrano-rails

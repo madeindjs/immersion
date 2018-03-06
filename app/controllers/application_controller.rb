@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action :set_seo_tags
+
   helper_method :current_user_session, :current_user
 
   protected
@@ -29,6 +31,13 @@ class ApplicationController < ActionController::Base
 
   def render_alert
     render plain: '<div class="alert alert-danger">Vous n\'avez pas le droit d\'accéder à cette page</div>', status: 403
+  end
+
+  def set_seo_tags
+    path = "#{controller_name}.#{action_name}"
+
+    @title = t "seo.#{path}.title"
+    @description = t "seo.#{path}.description"
   end
 
 
