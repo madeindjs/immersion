@@ -3,11 +3,7 @@
     <h1 class="my-5 display-3"><%= t 'landing.big_punchline_description' %></h1>
     <p class="lead"><%= t 'landing.big_punchline_description_content' %></p>
     <p class="alert alert-warning"><%= t 'landing.warning-beta' %></p>
-    <%= bootstrap_form_with url: products_path, layout: :inline, html: {class: 'justify-content-center'} do |form| %>
-      <%= form.text_field :test, class: 'form-control-lg', hide_label: true, placeholder: 'Repas camerounais' %>
-      <%= form.collection_select :category_id, Category.all, :id, :name,{hide_label: true}, {class: 'form-control-lg'} %>
-      <%= form.submit 'Rechercher', class: 'btn btn-lg btn-primary' %>
-    <% end %>
+    <%= render 'products/search_form' %>
   </div>
 </section>
 <section class="row text-center border-top text-center py-5">
@@ -32,6 +28,7 @@
     <h2 class="display-4"><%= t 'products' %></h2>
     <p class="lead pb-2"><%= t 'page.home.categories_h2_description' %></p>
     <%= render 'products/list', products: @products %>
+    <%= link_to t('page.home.see_more_products'), products_path, class: 'btn btn-lg btn-secondary float-right' %>
   </div>
 </section>
 <section class="row text-center border-top py-5">

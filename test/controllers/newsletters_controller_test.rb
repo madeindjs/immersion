@@ -5,11 +5,6 @@ class NewslettersControllerTest < ActionDispatch::IntegrationTest
     @newsletter = newsletters(:one)
   end
 
-  test "should get new" do
-    get new_newsletter_url
-    assert_response :success
-  end
-
   test "should create newsletter" do
     assert_difference('Newsletter.count') do
       post newsletters_url, params: { newsletter: { email: @newsletter.email } }

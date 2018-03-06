@@ -29,7 +29,6 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><%= link_to t('users'), users_path, class: 'nav-link' %></li>
             <li class="nav-item"><%= link_to t('categories'), categories_path, class: 'nav-link' %></li>
-            <li class="nav-item"><%= link_to t('newsletter.title'), new_newsletter_path, class: 'nav-link' %></li>
             <li class="nav-item"><%= link_to t('about'), about_path, class: 'nav-link' %></li>
           </ul>
           <ul class="navbar-nav mt-2 mt-md-0">
@@ -56,6 +55,7 @@
           <li class="list-inline-item"><%= link_to t('legal_mentions'), legal_path %></li>
           <li class="list-inline-item"><%= link_to t('about'), about_path %></li>
           <li class="list-inline-item"><%= link_to t('contact'), contact_path %></li>
+          <li class="list-inline-item"><%= link_to t('newsletter.title'), home_path(anchor: 'new_newsletter'), class: 'nav-link' %></li>
         </ul>
       </div>
     </footer>

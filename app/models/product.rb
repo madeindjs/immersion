@@ -6,4 +6,15 @@ class Product < ApplicationRecord
 
   extend FriendlyId
   friendly_id :name, use: :slugged
+
+
+  def self.from_params params
+    conditions = {}
+
+    conditions[:name] = params[:name] if params[:name] and !params[:name].empty?
+    conditions[:category_id] = params[:category_id] if params[:category_id] and !params[:category_id].empty?
+
+    return Product.where conditions
+  end
+
 end

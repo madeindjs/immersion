@@ -1,13 +1,6 @@
 class NewslettersController < ApplicationController
   before_action :set_newsletter, only: [:show, :destroy]
 
-
-  # GET /newsletters/new
-  def new
-    @newsletter = Newsletter.new
-  end
-
-
   # POST /newsletters
   # POST /newsletters.json
   def create

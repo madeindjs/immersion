@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :newsletters
+  resources :newsletters, only: [:create, :destroy]
   resources :messages
   resources :reservations, only: [:index, :show, :create, :destroy]
   # sugar URL

@@ -1,0 +1,5 @@
+<%= bootstrap_form_with url: products_path, local: true, method: 'GET', scope: :product, layout: :inline, html: {class: 'justify-content-center'} do |form| %>
+  <%= form.text_field :name, class: 'form-control-lg', hide_label: true, placeholder: 'Repas camerounais' %>
+  <%= form.collection_select :category_id, Category.all, :id, :name,{hide_label: true}, {class: 'form-control-lg'} %>
+  <%= form.submit 'Rechercher', class: 'btn btn-lg btn-primary' %>
+<% end %>

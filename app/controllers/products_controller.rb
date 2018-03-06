@@ -6,7 +6,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if product_params
+      @products = Product.includes(:category, :user).from_params product_params
+    else
+      @products = Product.includes(:category, :user).all
+    end
   end
 
   # GET /products/1
