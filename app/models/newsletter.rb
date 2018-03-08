@@ -1,6 +1,13 @@
 class Newsletter < ApplicationRecord
   before_create :generate_unsubscribe_link
 
+  has_many :newsletter_histories
+
+  def send_mail action
+    NewsletterMailer.send(action, self).deliver_now
+    NewsletterHistory.create newsletter_id: self.id, method: action
+  end
+
   def unsubscribe
     self.deleted_at = DateTime.now
     self.save

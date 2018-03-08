@@ -12,4 +12,11 @@ class NewsletterTest < ActiveSupport::TestCase
 
     assert_equal newsletter.deleted_at.to_date, DateTime.now.to_date
   end
+
+  test "should send email & add it to history" do
+    newsletter = newsletters(:one)
+    assert_difference('NewsletterHistory.count') do
+      newsletter.send_mail('presentation')
+    end
+  end
 end
