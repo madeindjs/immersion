@@ -1,0 +1,2 @@
+class NewsletterHistory < ApplicationRecord
+end
