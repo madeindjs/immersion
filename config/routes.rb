@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :newsletters, only: [:create, :destroy]
+  resources :newsletters, only: [:create]
+  get "unsubscribe/:hash" => "newsletters#unsubscribe", as: 'unsubscribe'
   resources :messages
   resources :reservations, only: [:index, :show, :create, :destroy]
   # sugar URL

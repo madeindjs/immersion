@@ -16,11 +16,15 @@ class NewslettersController < ApplicationController
   end
 
 
-  # DELETE /newsletters/1
-  # DELETE /newsletters/1.json
-  def destroy
-    @newsletter.destroy
-    flash[:success] = t('newsletter.destroy.success')
+  # GET /unsubscribe/hash
+  def unsubscribe
+    if newsletter = Newsletter.find_by(unsubscribe_link: params[:hash])
+      newsletter.unsubscribe
+      flash[:success] = t('newsletter.unsubscribe.success')
+    else
+      flash[:danger] = t('newsletter.unsubscribe.danger')
+    end
+
     redirect_to home_url
   end
 

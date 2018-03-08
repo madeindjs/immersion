@@ -13,11 +13,11 @@ class NewslettersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to home_url
   end
 
-  test "should destroy newsletter" do
-    assert_difference('Newsletter.count', -1) do
-      delete newsletter_url(@newsletter)
-    end
+  test "should unsubscribe newsletter" do
+    get unsubscribe_url(hash: @newsletter.unsubscribe_link)
+    @newsletter.reload
 
     assert_redirected_to home_url
+    assert_not_nil @newsletter.deleted_at
   end
 end

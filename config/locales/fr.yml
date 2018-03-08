@@ -80,6 +80,11 @@ fr:
     paid: payée
     archived: archivée
 
+  newsletter:
+    unsubscribe:
+      success: Votre email a été retiré de la liste de diffusion
+      danger: Une erreur est survenue
+
   user:
     new: Se créer un compte
     edit: Mettre à jour mon profil
