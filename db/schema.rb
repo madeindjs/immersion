@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309115020) do
+ActiveRecord::Schema.define(version: 20180308124146) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -42,8 +42,6 @@ ActiveRecord::Schema.define(version: 20180309115020) do
 
   create_table "newsletter_subscriptions", force: :cascade do |t|
     t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "firstname"
     t.string "lastname"
     t.string "address"
@@ -52,8 +50,10 @@ ActiveRecord::Schema.define(version: 20180309115020) do
     t.string "country"
     t.string "job"
     t.string "phone"
-    t.datetime "deleted_at"
     t.string "unsubscribe_link"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
