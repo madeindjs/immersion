@@ -1,0 +1,33 @@
+
+<h1>Newsletter</h1>
+
+<p>dispponnible pour envoi</p>
+
+<h2>Prévisualisation</h2>
+<div class="jumbotron p-2">
+	<p><strong>Object:</strong> <%= @newsletter.object %></p>
+	<hr>
+	<p><%= @newsletter.content %></p>
+</div>
+
+<h2>Liste d'envois</h2>
+<table class="table table-striped">
+
+	<tr>
+		<th>email</th>
+		<th>date</th>
+	</tr>
+
+	<% @newsletter.newsletter_histories.each do |history| %>
+
+		<tr>
+			<td><%= history.newsletter_subscription.email %></td>
+			<td><%= history.created_at %></td>
+		</tr>
+
+	<% end %>
+</table>
+
+<%= link_to 'send', send_newsletter_path(@newsletter), class: 'btn btn-danger' %>
+<%= link_to 'Edit', edit_newsletter_path(@newsletter), class: 'btn btn-warning' %>
+<%= link_to 'Back', newsletters_path, class: 'btn btn-danger' %>

@@ -44,7 +44,7 @@ class User < ApplicationRecord
   # end
 
   def is_admin?
-    false
+    self.admin
   end
 
   # activate account from user email token

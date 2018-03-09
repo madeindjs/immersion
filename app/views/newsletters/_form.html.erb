@@ -1,0 +1,5 @@
+<%= bootstrap_form_for(newsletter) do |form| %>
+  <%= form.text_field :object, id: :newsletter_object %>
+  <%= form.text_area :content, id: :newsletter_content %>
+  <%= form.submit %>
+<% end %>

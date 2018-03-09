@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :newsletters
+  get "newsletters/:id/send" => "newsletters#send_emails", as: 'send_newsletter'
   resources :newsletter_subscriptions, only: [:create]
   get "unsubscribe/:hash" => "newsletters#unsubscribe", as: 'unsubscribe'
   resources :messages

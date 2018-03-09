@@ -1,8 +1,9 @@
 class NewsletterMailer < ApplicationMailer
 
-  def presentation newsletter
+  def newsletter newsletter, subscription
     @newsletter = newsletter
-    mail to: @newsletter.email, subject: 'Immersion'
+    @subscription = subscription
+    mail to: @subscription.email, subject: @newsletter.object
   end
 
 end

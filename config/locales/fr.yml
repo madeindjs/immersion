@@ -81,6 +81,11 @@ fr:
     archived: archivée
 
   newsletter:
+    create:
+      success: La newsletter a été créée avec succès
+      danger: Une erreur est survenue
+
+  newsletter_subscription:
     unsubscribe:
       success: Votre email a été retiré de la liste de diffusion
       danger: Une erreur est survenue
