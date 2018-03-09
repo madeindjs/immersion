@@ -1,3 +1,3 @@
 class NewsletterHistory < ApplicationRecord
-  belongs_to :newsletter
+  belongs_to :newsletter_subscription
 end

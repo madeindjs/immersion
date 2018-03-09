@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  newsletter: 
+  newsletter_subscription_id: 1
   method: MyString
 
 two:
-  newsletter: 
+  newsletter_subscription_id: 1
   method: MyString

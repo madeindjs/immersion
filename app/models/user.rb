@@ -74,7 +74,7 @@ class User < ApplicationRecord
   private
 
   def add_to_newsletter
-    Newsletter.create email: self.email
+    NewsletterSubscription.create email: self.email
   end
 
 end
