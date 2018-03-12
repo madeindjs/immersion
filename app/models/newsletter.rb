@@ -10,6 +10,6 @@ class Newsletter < ApplicationRecord
 
   def to_send_emails
     subscriber_ids = self.newsletter_histories.map{|h| h.newsletter_subscription.id }
-    NewsletterSubscription.where.not(id: subscriber_ids)
+    NewsletterSubscription.where.not(id: subscriber_ids).where('deleted_at IS NULL')
   end
 end

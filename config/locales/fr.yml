@@ -137,6 +137,10 @@ fr:
       success: Votre addresse a été ajoutée à la newsletter
       error: Une erreur est survenue
 
+    unsubscribe:
+      success: Votre email a été retiré de la liste de diffusion
+      error: Une erreur est survenue 
+
     legal:
       code_of_ethic: Une Charte Éthique, pourquoi ?
       code_of_ethic_content: >
@@ -197,4 +201,3 @@ fr:
         title: Profitez
         description: Immergez-vous dans la gastronomie et la culture locale, rencontrez d'autres voyageurs autour d'un repas partagé et découvrez la magie d'une expérience unique
 
-  
