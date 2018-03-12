@@ -13,10 +13,4 @@ class NewsletterSubscriptionTest < ActiveSupport::TestCase
     assert_equal subscription.deleted_at.to_date, DateTime.now.to_date
   end
 
-  test "should send email & add it to history" do
-    subscription = newsletter_subscriptions(:one)
-    assert_difference('NewsletterHistory.count') do
-      subscription.send_mail('presentation')
-    end
-  end
 end

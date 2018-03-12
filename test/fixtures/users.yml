@@ -3,7 +3,7 @@
 me:
   id: 1
   email: madeindjs@gmail.com
-  firstname: Alexandre 
+  firstname: Alexandre
   slug: alexandre
   lastname: Rousseau
   activated: true
@@ -11,12 +11,13 @@ me:
   crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("20462046" + salt) %>
   persistence_token: <%= Authlogic::Random.hex_token %>
   perishable_token: <%= Authlogic::Random.hex_token %>
+  admin: true
 
 
 my_girlfriend:
   id: 2
   email: lorene.odet@orange.fr
-  firstname: Lorène 
+  firstname: Lorène
   slug: lorene
   lastname: Odet
   password_salt: <%= salt = Authlogic::Random.hex_token %>
@@ -26,7 +27,7 @@ my_girlfriend:
 super_user:
   id: 3
   email: a.rousseau@votre.restaurant
-  firstname: Alexandre 
+  firstname: Alexandre
   slug: arousseau
   lastname: Rousseau
   activated: true

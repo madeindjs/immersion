@@ -19,9 +19,12 @@ const editor = window.pell.init({
   defaultParagraphSeparator: 'p',
 });
 
-var pellc = document.getElementsByClassName('pell-content')
-i = pellc.length;
-while(i--) {
-  pellc[i].innerHTML = '<%= @newsletter.content.html_safe %>';
-}
+<% if @newsletter.content %>
+
+  var pellc = document.getElementsByClassName('pell-content')
+  i = pellc.length;
+  while(i--) {
+    pellc[i].innerHTML = '<%= @newsletter.content.html_safe %>';
+  }
+<% end %>
 </script>
