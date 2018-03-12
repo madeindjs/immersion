@@ -7,6 +7,8 @@ fr:
         title: Nous contacter
       about:
         title: A propos du projet
+      legal:
+        title: Mentions légales
     categories:
       index:
         title: Préstations
