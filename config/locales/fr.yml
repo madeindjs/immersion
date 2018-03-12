@@ -84,6 +84,12 @@ fr:
     create:
       success: La newsletter a été créée avec succès
       danger: Une erreur est survenue
+    update:
+      success: Votre newsletter a été modifiée.
+      danger: Une erreur est survenue
+    send:
+      success: Les emails ont été envoyés.
+      danger: Une erreur est survenue
 
   newsletter_subscription:
     unsubscribe:
@@ -110,7 +116,6 @@ fr:
     save: Sauvegarder
     password: Mot de passe
     password_confirmation: Confirmation du mot de passe
-
 
   page:
     home:
@@ -253,3 +258,10 @@ fr:
       new:
         title: Lorem ipsum
         description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    newsletters:
+      index:
+        title: Gestion des newsletter
+      show:
+        title: Détails de la newsletter
+      edit:
+        title: Modifier la newsletter
