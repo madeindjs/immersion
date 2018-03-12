@@ -1,0 +1,55 @@
+fr:
+  seo:
+    pages:
+      home:
+        title: Immersion
+      contact:
+        title: Nous contacter
+      about:
+        title: A propos du projet
+    categories:
+      index:
+        title: Préstations
+      show:
+        title: Lorem ipsum
+      new:
+        title: Lorem ipsum
+    users:
+      index:
+        title: Lorem ipsum
+      show:
+        title: Lorem ipsum
+      new:
+        title: Lorem ipsum
+      edit:
+        title: Lorem ipsum
+    products:
+      index:
+        title: Lorem ipsum
+      show:
+        title: Lorem ipsum
+      new:
+        title: Lorem ipsum
+      edit:
+        title: Lorem ipsum
+    reservations:
+      index:
+        title: Lorem ipsum
+      show:
+        title: Lorem ipsum
+      new:
+        title: Lorem ipsum
+      edit:
+        title: Lorem ipsum
+    user_sessions:
+      new:
+        title: Lorem ipsum
+    newsletters:
+      index:
+        title: Gestion des newsletter
+      new:
+        title: Création d'une newsletter
+      show:
+        title: Détails de la newsletter
+      edit:
+        title: Modifier la newsletter
