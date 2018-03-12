@@ -1,33 +1,38 @@
+<% to_send_count = @newsletter.to_send_emails.count %>
 
 <h1>Newsletter</h1>
 
-<p>dispponnible pour envoi</p>
+<div class="btn-group btn-group-lg">
+  <%= link_to 'envoyer (%s)' % to_send_count,
+        send_newsletter_path(@newsletter),
+        data: { confirm: "Vous êtes sur le point d'envoyer %s ?" % pluralize(to_send_count, 'mail', 'mails')},
+        class: 'btn btn-primary' %>
+  <%= link_to 'Edit', edit_newsletter_path(@newsletter), class: 'btn btn-warning' %>
+  <%= link_to 'Destroy', @newsletter, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
 
 <h2>Prévisualisation</h2>
 <div class="jumbotron p-2">
-	<p><strong>Object:</strong> <%= @newsletter.object %></p>
-	<hr>
-	<p><%= @newsletter.content %></p>
+  <p><strong>Object:</strong> <%= @newsletter.object %></p>
+  <hr>
+  <%= render 'newsletter_mailer/newsletter' %>
 </div>
 
 <h2>Liste d'envois</h2>
 <table class="table table-striped">
 
-	<tr>
-		<th>email</th>
-		<th>date</th>
-	</tr>
+  <tr>
+    <th>email</th>
+    <th>date</th>
+  </tr>
 
-	<% @newsletter.newsletter_histories.each do |history| %>
+  <% @newsletter.newsletter_histories.each do |history| %>
 
-		<tr>
-			<td><%= history.newsletter_subscription.email %></td>
-			<td><%= history.created_at %></td>
-		</tr>
+    <tr>
+      <td><%= history.newsletter_subscription.email %></td>
+      <td><%= history.created_at %></td>
+    </tr>
 
-	<% end %>
+  <% end %>
 </table>
 
-<%= link_to 'send', send_newsletter_path(@newsletter), class: 'btn btn-danger' %>
-<%= link_to 'Edit', edit_newsletter_path(@newsletter), class: 'btn btn-warning' %>
-<%= link_to 'Back', newsletters_path, class: 'btn btn-danger' %>

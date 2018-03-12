@@ -9,6 +9,7 @@ class NewslettersController < ApplicationController
 
   # GET /newsletters/1
   def show
+    @subscription = NewsletterSubscription.new unsubscribe_link: "azerty"
   end
 
   def send_emails
