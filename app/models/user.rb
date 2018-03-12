@@ -44,7 +44,7 @@ class User < ApplicationRecord
   # end
 
   def is_admin?
-    false
+    self.admin
   end
 
   # activate account from user email token
@@ -74,7 +74,7 @@ class User < ApplicationRecord
   private
 
   def add_to_newsletter
-    Newsletter.create email: self.email
+    NewsletterSubscription.create email: self.email
   end
 
 end

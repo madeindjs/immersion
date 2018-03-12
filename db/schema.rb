@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227120116) do
+ActiveRecord::Schema.define(version: 20180309122243) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -33,8 +33,34 @@ ActiveRecord::Schema.define(version: 20180227120116) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "newsletters", force: :cascade do |t|
+  create_table "newsletter_histories", force: :cascade do |t|
+    t.integer "newsletter_id"
+    t.integer "newsletter_subscription_id"
+    t.string "method"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletter_subscriptions", force: :cascade do |t|
     t.string "email"
+    t.string "firstname"
+    t.string "lastname"
+    t.string "address"
+    t.string "zip_code"
+    t.string "city"
+    t.string "country"
+    t.string "job"
+    t.string "phone"
+    t.string "unsubscribe_link"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "object"
+    t.string "content"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -96,6 +122,7 @@ ActiveRecord::Schema.define(version: 20180227120116) do
     t.string "string", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["perishable_token"], name: "index_users_on_perishable_token"
     t.index ["slug"], name: "index_users_on_slug", unique: true

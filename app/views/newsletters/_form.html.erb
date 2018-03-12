@@ -1,4 +1,30 @@
-<%= bootstrap_form_for Newsletter.new do |form| %>
-  <%= form.text_field :email, id: :newsletter_email, class: 'form-control-lg', placeholder: 'email', hide_label: true %>
-  <%= form.submit t('newsletter.new'), class: 'btn btn-lg btn-primary' %>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/pell/dist/pell.min.css">
+
+<%= bootstrap_form_for(newsletter) do |form| %>
+  <%= form.text_field :object, id: :newsletter_object %>
+  <div id="newsletter_content_pell" style="background: white"></div>
+  <%= form.hidden_field :content, id: :newsletter_content %>
+  <%= form.submit %>
 <% end %>
+
+<script src="https://unpkg.com/pell"></script>
+
+<script>
+const editor = window.pell.init({
+  // <HTMLElement>, required
+  element: document.getElementById('newsletter_content_pell'),
+  onChange: function(html) {
+    document.getElementById('newsletter_content').value = html;
+  },
+  defaultParagraphSeparator: 'p',
+});
+
+<% if @newsletter.content %>
+
+  var pellc = document.getElementsByClassName('pell-content')
+  i = pellc.length;
+  while(i--) {
+    pellc[i].innerHTML = '<%= @newsletter.content.html_safe %>';
+  }
+<% end %>
+</script>

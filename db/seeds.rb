@@ -21,6 +21,12 @@ if Rails.env.development?
       activated: true,
     )
 
+    NewsletterSubscription.create(
+      email: Faker::Internet.email,
+      firstname: Faker::Name.first_name,
+      lastname: Faker::Name.last_name,
+    )
+
     rand(0..5).times do
       category_offset = rand(Category.count)
 

@@ -1,0 +1,31 @@
+<h1>Newsletters</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Envois</th>
+      <th>Rester à envoyer</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newsletters.each do |newsletter| %>
+      <tr>
+        <td><%= link_to newsletter.object, newsletter %></td>
+        <td><%= pluralize newsletter.newsletter_histories.count, "personne", "personnes"  %></td>
+        <td><%= pluralize newsletter.to_send_emails.count, "personne", "personnes"  %></td>
+        <td>
+          <%= link_to 'Show', newsletter, class: 'btn btn-default' %>
+          <%= link_to 'Edit', edit_newsletter_path(newsletter), class: 'btn btn-warning' %>
+          <%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('newsletter.new'), new_newsletter_path, class: 'btn btn-primary' %>
