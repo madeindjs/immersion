@@ -11,7 +11,8 @@ class Product < ApplicationRecord
   def self.from_params params
     conditions = {}
 
-    conditions[:name] = params[:name] if params[:name] and !params[:name].empty?
+    # conditions[:name] = params[:name] if params[:name] and !params[:name].empty?
+    conditions[:country] = params[:country] if params[:country] and !params[:country].empty?
     conditions[:category_id] = params[:category_id] if params[:category_id] and !params[:category_id].empty?
 
     return Product.where conditions

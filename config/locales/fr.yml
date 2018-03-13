@@ -40,10 +40,11 @@ fr:
     new: Créer un produit
     created_by: proposé par
     edit: Metre à jour mon produit
-
     price_unit: € par personne
-
     start_on: Débute le
+
+    placeholder:
+      name: Repas typique
 
   reservation:
     index: Mes réservations
@@ -182,11 +183,11 @@ fr:
 
     unsubscribe:
       success: Votre email a été retiré de la liste de diffusion
-      error: Une erreur est survenue 
+      error: Une erreur est survenue
 
 
   landing:
-    big_punchline_description: Voyagez près de chez vous
+    big_punchline_description: Le voyage culturel à portée de main
     big_punchline_description_content: Découvrez nos expériences culinaires chez l'habitant
     warning-beta: Le projet est en cours de construction
 

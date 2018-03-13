@@ -49,6 +49,9 @@ gem 'rmagick' # sudo apt-get install libmagickwand-dev
 gem 'authlogic', '>= 3.5'
 gem 'authlogic_email_token'
 
+# form
+gem 'country_select'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

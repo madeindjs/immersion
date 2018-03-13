@@ -1,5 +1,22 @@
 <%= bootstrap_form_with url: products_path, local: true, method: 'GET', scope: :product, layout: :inline, html: {class: 'justify-content-center'} do |form| %>
-  <%= form.text_field :name, class: 'form-control-lg', hide_label: true, placeholder: 'Repas camerounais' %>
-  <%= form.collection_select :category_id, Category.all, :id, :name,{hide_label: true}, {class: 'form-control-lg'} %>
+  <%= form.collection_select :category_id, Category.all, :id, :name,
+  		{
+  			hide_label: true,
+  			selected: (params[:product] && params[:product][:category_id] ? params[:product][:category_id] : nil),
+  			include_blank: true
+  		},
+  		{
+  			class: 'form-control-lg'
+		} %>
+  <div class="form-group">
+    <%= form.country_select :country,
+    	{
+    		selected: (params[:product] && params[:product][:country] ? params[:product][:country] : "PL"),
+    		include_blank: true
+    	},
+    	{
+    		class: 'form-control form-control-lg'
+		} %>
+  </div>
   <%= form.submit 'Rechercher', class: 'btn btn-lg btn-primary' %>
 <% end %>

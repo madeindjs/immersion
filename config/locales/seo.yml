@@ -31,7 +31,7 @@ fr:
       show:
         title: Lorem ipsum
       new:
-        title: Lorem ipsum
+        title: Création d'un nouveau produit
       edit:
         title: Lorem ipsum
     reservations:
