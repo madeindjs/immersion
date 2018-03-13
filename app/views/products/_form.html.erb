@@ -1,6 +1,7 @@
 <%= bootstrap_form_for(product, multipart: true) do |form| %>
   <%= form.text_field :name, label: t('form.name'), placeholder: t('product.placeholder.name') %>
   <%= form.number_field :price, label: t('form.price'), append: '€' %>
+  <%= form.number_field :duration, label: t('form.duration'), append: 'min' %>
   <div class="form-group">
     <%= form.label :country, 'Country' %>
     <%= form.country_select :country, {}, class: 'form-control' %>

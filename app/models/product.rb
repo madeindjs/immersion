@@ -1,12 +1,16 @@
 class Product < ApplicationRecord
+  extend FriendlyId
+
   belongs_to :user
   belongs_to :category
 
+  validates :name, presence: true, length: {minimum: 2}
+  validates :price, presence: true
+  validates_associated :category
+  validates_associated :user
+
   mount_uploader :picture, PictureUploader
-
-  extend FriendlyId
   friendly_id :name, use: :slugged
-
 
   def self.from_params params
     conditions = {}

@@ -6,6 +6,10 @@ class Reservation < ApplicationRecord
 
   after_create :create_initial_status
 
+  validates_associated :user
+  validates_associated :product
+  validates :persons, presence: true
+  validates :start_on, presence: true
 
   def current_status
     self.reservation_statuses.last

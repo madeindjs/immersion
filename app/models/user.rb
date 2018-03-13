@@ -7,7 +7,9 @@ class User < ApplicationRecord
 
   include Authlogic::ActsAsAuthentic::EmailToken::Confirmation
 
-  validates_uniqueness_of :email
+
+  validates_uniqueness_of :email, presence: true, uniqueness: true
+  validates :price, presence: true
 
   mount_uploader :picture, PictureUploader
 
