@@ -1,7 +1,7 @@
 class CreateCategories < ActiveRecord::Migration[5.1]
   def change
     create_table :categories do |t|
-      t.string :name
+      t.string :name, unique: true
       t.string :description
 
       # friendly_id
@@ -13,7 +13,7 @@ class CreateCategories < ActiveRecord::Migration[5.1]
       t.timestamps
     end
 
-    add_column :products, :category_id, :integer, not_null: true, index: true
+    add_reference :products, :category, foreign_key: true
 
     Category.create name: 'Repas'
     Category.create name: 'Musique'

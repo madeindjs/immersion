@@ -36,9 +36,10 @@ ActiveRecord::Schema.define(version: 20180313120036) do
   create_table "newsletter_histories", force: :cascade do |t|
     t.integer "newsletter_id"
     t.integer "newsletter_subscription_id"
-    t.string "method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["newsletter_id"], name: "index_newsletter_histories_on_newsletter_id"
+    t.index ["newsletter_subscription_id"], name: "index_newsletter_histories_on_newsletter_subscription_id"
   end
 
   create_table "newsletter_subscriptions", force: :cascade do |t|
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 20180313120036) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_newsletters_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 20180313120036) do
     t.integer "category_id"
     t.integer "duration"
     t.string "country", limit: 2
+    t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["country"], name: "index_products_on_country"
     t.index ["slug"], name: "index_products_on_slug", unique: true
     t.index ["user_id"], name: "index_products_on_user_id"
@@ -97,6 +100,8 @@ ActiveRecord::Schema.define(version: 20180313120036) do
     t.datetime "start_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_reservations_on_product_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

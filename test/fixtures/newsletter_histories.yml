@@ -2,8 +2,6 @@
 
 one:
   newsletter_subscription_id: 1
-  method: MyString
 
 two:
   newsletter_subscription_id: 1
-  method: MyString
