@@ -2,8 +2,6 @@
 
 ## Instalation
 
-### Developpment environnement
-
 Install [RVM](https://rvm.io/) then
 
 ```bash
@@ -17,6 +15,8 @@ $ git clone https://github.com/madeindjs/immersion.git
 $ cd immersion
 $ bundle install
 ```
+
+### Developpment environnement
 
 Use [Maildev](https://www.npmjs.com/package/maildev)
 
